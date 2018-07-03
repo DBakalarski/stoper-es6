@@ -79,7 +79,6 @@ let catchButton = document.getElementById('catch-time');
 catchButton.addEventListener('click',() => stopwatch.catchTime());
 
 
-
 function pad0(value) {
     let result = value.toString();
     if (result.length < 2) {
