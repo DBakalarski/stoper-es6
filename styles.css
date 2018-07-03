@@ -1,0 +1,40 @@
+body {
+	margin: 0;
+	font-family: 'Roboto Mono', monospace;
+    background: -webkit-linear-gradient(left, #d3cce3, #e9e4f0);
+    background: -o-linear-gradient(left, #d3cce3, #e9e4f0);
+    background: linear-gradient(to right, #d3cce3, #e9e4f0); 
+    font-size: 65px;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}		
+
+.button {
+    text-decoration: none;
+}
+.button.start{
+	color: #27ae60;
+}
+.button.stop {
+	color: #e74c3c;
+}
+.button.stop {
+	color: #c0392b;
+}
+.button.reset {
+	color: #2c3e50;
+}
+.button.catch {
+	color: #8e44ad;
+}
+.button.start:hover, .button.stop:hover, .button.reset:hover, .button.catch:hover {
+	text-decoration: underline;
+}
+
+li {
+	font-size: 32px;
+    list-style-type: none;
+}
