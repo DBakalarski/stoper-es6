@@ -1,4 +1,4 @@
-class Stopwatch {
+class Stopwatch extends React.Component{
 	constructor(display) {
 		this.running = false;
 		this.display = display;
@@ -60,9 +60,33 @@ class Stopwatch {
 		liElement.innerText = this.format(this.times);
 		result.appendChild(liElement);
 	}
+	render() {
+		return (
+			<div>
+				<nav className={'controls'}>
+					<a href={'#'} className={'button'} onClick={this.start}>
+						Start
+					</a>
+					<a href={'#'} className={'button'} onClick={this.stop} >
+						Stop
+					</a>
+					<a href={'#'} className={'button'} onClick={this.reset} >
+						Reset
+					</a>
+					<a href={'#'} className={'button'} onClick={this.catch}>
+						Catch
+					</a>								
+				</nav>
+				<div className={'stopwatch'}>
+				</div>
+				<ul className={'result'}>
+				</ul>
+			</div>
+		)
+	};
 }
 
-
+/*
 const stopwatch = new Stopwatch(document.querySelector('.stopwatch'));
 const result = document.querySelector('.results');
 
@@ -77,7 +101,7 @@ resetButton.addEventListener('click',() => stopwatch.resetDisplay());
 
 let catchButton = document.getElementById('catch-time');
 catchButton.addEventListener('click',() => stopwatch.catchTime());
-
+*/
 
 function pad0(value) {
     let result = value.toString();
@@ -86,3 +110,7 @@ function pad0(value) {
     }
     return result;
 }
+
+ReactDOM.render{
+	<Stopwatch />, document.getElementById('app')
+};
