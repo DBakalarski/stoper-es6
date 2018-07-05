@@ -1,5 +1,6 @@
 class Stopwatch extends React.Component{
 	constructor(display) {
+		super(display);
 		this.running = false;
         this.state = {
     		times: {
@@ -7,6 +8,7 @@ class Stopwatch extends React.Component{
 		        seconds: 0,
 		        miliseconds: 0
     		},
+    	};
 		this.display = display;
 		this.reset();
 		this.print(this.times);
@@ -76,10 +78,10 @@ class Stopwatch extends React.Component{
 					<a href={'#'} className={'button'} onClick={this.start.bind(this)}>
 						Start
 					</a>
-					<a href={'#'} className={'button'} onClick={this.stop.bind(this)} >
+					<a href={'#'} className={'button'} onClick={this.stop.bind(this)}>
 						Stop
 					</a>
-					<a href={'#'} className={'button'} onClick={this.reset.bind(this)} >
+					<a href={'#'} className={'button'} onClick={this.reset.bind(this)}>
 						Reset
 					</a>
 					<a href={'#'} className={'button'} onClick={this.catch.bind(this)}>
@@ -91,8 +93,8 @@ class Stopwatch extends React.Component{
 				<ul className={'result'}>
 				</ul>
 			</div>
-		)
-	};
+		);
+	}
 }
 
 /*
@@ -120,6 +122,6 @@ function pad0(value) {
     return result;
 }
 
-ReactDOM.render{
+ReactDOM.render(
 	<Stopwatch />, document.getElementById('app')
-};
+);
